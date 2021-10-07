@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Modal</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div data-modal class="model_beckdrop is-hidden">
+				<div class="model">
+					<button data-modal-close class="close">
+						<svg  class="close-x" width="18px" height="18px">
+							<use href="./images/icon/close.svg#x">
+							</use>
+						</svg>                  
+					</button>
+					<b class="model-title">Оставьте свои данные, мы вам перезвоним</b>
+					<form class="model-form">
+							<div class="form-field">
+									<label class="label-form" for="name">Имя</label>
+								<div class="form-layer">
+										<input class="form-name" id="name" type="text" name="name" maxlength="50">
+										<svg class="input-icon">
+											<use href="./images/icon/form.svg#icon-person-form"></use>
+										</svg>
+								</div>
+							</div>
+
+							<div class="form-field">
+									
+									<label class="label-form" for="phone">Телефон</label>
+								<div class="form-layer">
+									<input class="form-name" id="phone" type="tel" name="phone" maxlength="16">
+									<svg class="input-icon">
+										<use href="./images/icon/form.svg#icon-phone-form"></use>
+									</svg>
+								</div>
+							</div>
+
+							<div class="form-field">
+									<label class="label-form" for="email">Почта</label>
+								<div class="form-layer">
+									<input class="form-name" id="email" name="email" type="email"  maxlength="50">
+									<svg class="input-icon">
+										<use href="./images/icon/form.svg#icon-email-form"></use>
+									</svg>
+								</div>
+							</div>
+
+							<div class="form-field">
+								<label class="label-form" for="comment">Комментарий</label>
+								<textarea class="form-comment" name="comment" id="comment" placeholder="Введите текст" ></textarea>
+							</div>
+							<div class="form-field flex-check">
+								
+								<label class="label-form agreement" for="check"><input class="agreement-checkbox" type="checkbox" name="ofer" id="check" value="true">
+									<span class="psevdo-check"></span><span class="label__res">Соглашаюсь с рассылкой и принимаю</span><a class="label-link" href="/">Условия договора</a>
+									
+								</label>
+							</div>
+							<div class="formm-center_btn">
+							<button class="form-btn" type="submit">Отправить</button>
+							</div>
+					
+					</form>
+				</div>
+	</div>
