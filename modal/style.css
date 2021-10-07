@@ -1,3 +1,6 @@
+body{
+    background: rgb(43, 42, 42);
+}
 .flex-check{
     margin-top: 20px;
     display: flex;
@@ -6,10 +9,7 @@
 }
 .model_beckdrop{
     position:fixed;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top:94px;
-    padding-bottom: 94px;
+    padding: 20px;
     left: 0;
     top: 0;
     bottom: 0;
@@ -24,7 +24,11 @@
     pointer-events: none;
 }
 .model{
-    
+    position: absolute;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+    top:50%;
+    left:50%;
     border-radius: 4px;
     min-width: 528px;
     min-height: 581px;
@@ -51,8 +55,8 @@
 }
 .form-layer:focus-within > .label-form,
 .form-layer:focus-within > .input-icon{
-    color: $style;
-    fill: $style;
+    color: rgb(29, 26, 211);
+    fill: rgb(29, 26, 211);
 }
 
 .label-form{
@@ -74,12 +78,13 @@
     border-radius: 4px;
     outline: none;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:focus{
-        border: 1px solid $style;
-    }
-    &:focus + .input-icon{
-        fill: $style;  
-    }
+    
+}
+.form-name:focus{
+    border: 1px solid rgb(29, 26, 211);
+}
+.form-name:focus + .input-icon{
+    fill: rgb(29, 26, 211);  
 }
 
 .form-comment{
@@ -90,16 +95,17 @@
     border-radius: 4px;
     padding: 12px 16px 12px 16px;
     resize:none;
-    &:focus-within{
-        border-color:$style;
-    }
-    &::placeholder{
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.01em;
-        color: rgba(117, 117, 117, 0.5);
-    }
+    
+}
+.form-comment:focus-within{
+    border-color:rgb(29, 26, 211);
+}
+.form-comment::placeholder{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
 }
 
 
@@ -113,12 +119,13 @@
 }
 .agreement-checkbox{
     appearance: none;
-    &:checked + .psevdo-check{
-        background-image: url(../images/icon/icon-check.svg);
-        border-color: $style;
-        background-position: center;
-        background-size: contain;
-    }
+    
+}
+.agreement-checkbox:checked + .psevdo-check{
+    background-image: url(/icon-check.svg);
+    border-color: $style;
+    background-position: center;
+    background-size: contain;
 }
 .agreement{
     display: flex;
@@ -147,7 +154,6 @@
     box-sizing: border-box;
 }
 
-
 .input-icon{
     position:absolute;
     width:18px;
@@ -166,14 +172,17 @@
     height: 30px;
     border: 1px solid rgba(1, 1, 1, 0.1);
     border-radius: 50%;
-    top:102px;
+    top:8px;
     background-color: #fff;
     right: 21px;
     cursor: pointer;
-    &:hover .close-x{
-        fill:$style;
-    }
-    
+}
+.close:hover .close-x{
+    fill:rgb(29, 26, 211);
+}
+.bussines-buttom{
+    display: block;
+    margin: 0 auto;
 }
 .close-x{
     width: 18px;
@@ -195,8 +204,8 @@
     color: #fff;
     border-radius: 4px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover{
-        background-color: $style--darck;
-        cursor: pointer;
-    }
+}
+.form-btn:hover{
+    background-color: rgb(65, 71, 143);
+    cursor: pointer;
 }
